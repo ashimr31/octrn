@@ -3,7 +3,7 @@ FROM docker.io/richxsl/rhel7
 MAINTAINER Ashim Ranjitkar <ashiim@gmail.com>
 
 # Generic labels
-LABEL Component="httpd" \ 2
+LABEL Component="httpd"  
       Name="httpd-parent" \
       Version="1.0" \
       Release="1"
@@ -15,18 +15,18 @@ LABEL io.k8s.description="A basic Apache HTTP Server image with ONBUILD instruct
       io.openshift.tags="apache, httpd"
 
 # DocumentRoot for Apache
-ENV DOCROOT=/var/www/html \4
+ENV DOCROOT=/var/www/html \
     LANG=en_US \
     LOG_PATH=/var/log/httpd
 
 
 
-RUN   yum install -y --setopt=tsflags=nodocs --noplugins httpd && \ 5
+RUN   yum install -y --setopt=tsflags=nodocs --noplugins httpd && \ 
       yum clean all --noplugins -y && \
       echo "Hello from the httpd-parent container!" > ${HOME}/index.html
 
 # Allows child images to inject their own content into DocumentRoot
-ONBUILD COPY src/ ${DOCROOT}/ 6
+ONBUILD COPY src/ ${DOCROOT}/ 
 
 EXPOSE 80
 
