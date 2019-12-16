@@ -1,2 +1,2 @@
-FROM docker.io/php
-CMD bash -c "echo Hi from PHP server."
+FROM docker.io/centos
+CMD bash -c "echo Hi from CentOs server."
