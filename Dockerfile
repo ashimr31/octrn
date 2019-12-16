@@ -3,13 +3,13 @@ FROM docker.io/richxsl/rhel7
 MAINTAINER Ashim Ranjitkar <ashiim@gmail.com>
 
 # Generic labels
-LABEL Component="httpd"  
+LABEL Component="httpd"  \
       Name="httpd-parent" \
       Version="1.0" \
       Release="1"
 
 # Labels consumed by OpenShift
-LABEL io.k8s.description="A basic Apache HTTP Server image with ONBUILD instructions" \ 3
+LABEL io.k8s.description="A basic Apache HTTP Server image with ONBUILD instructions" \ 
       io.k8s.display-name="Apache HTTP Server parent image" \
       io.openshift.expose-services="80:http" \
       io.openshift.tags="apache, httpd"
