@@ -1,2 +1,2 @@
-FROM https://github.com/docker-library/php/
+FROM docker.io/php
 CMD bash -c "echo Hi from PHP server."
