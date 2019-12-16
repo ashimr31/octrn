@@ -26,7 +26,7 @@ RUN   yum install -y --setopt=tsflags=nodocs --noplugins httpd && \
       echo "Hello from the httpd-parent container!" > ${HOME}/index.html
 
 # Allows child images to inject their own content into DocumentRoot
-ONBUILD COPY src/ ${DOCROOT}/ 
+# ONBUILD COPY src/ ${DOCROOT}/ 
 
 EXPOSE 80
 
