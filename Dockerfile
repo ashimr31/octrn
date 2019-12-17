@@ -4,4 +4,4 @@ MAINTAINER Ashim Ranjitkar <ashiim@gmail.com>
 
 USER root
 
-RUN  yum update httpd
+RUN update httpd
