@@ -4,9 +4,8 @@ MAINTAINER Ashim Ranjitkar <ashiim@gmail.com>
 
 #USER root
 
-RUN yum --disablerepo=* --enablerepo="rhel-7-server-rpms" && \
-    yum update && \
+RUN yum update && \
     yum install -y httpd && \
-    yum clean all -y
-    
-RUN echo "centos is up.."
+    yum clean all -y && \
+    ps -ef && \
+    echo "centos is up.."
