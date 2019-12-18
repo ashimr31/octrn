@@ -1,7 +1,7 @@
-FROM httpd2
+FROM centos:7
 
 MAINTAINER Ashim Ranjitkar <ashiim@gmail.com>
 
-USER root
+#USER root
 
-RUN update httpd
+RUN echo "centos is up.."
